@@ -1,0 +1,15 @@
+name: mastodon_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - scikit-learn
+  - plotly
+  - statsmodels
+  - pandas
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel

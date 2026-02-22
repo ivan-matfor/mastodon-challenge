@@ -1,72 +1,118 @@
-# Project Name
+# Mastodon Engagement Analysis
 
-example image:
+![Mastodon Logo](https://upload.wikimedia.org/wikipedia/commons/d/d5/Mastodon_logo.svg)
 
+#### -- Project Status: Completed
 
-![alternative text](reports/img/pic01.jpg)
-
-
-#### -- Project Status: [Active, On-Hold, Completed]
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project. Limit to a short paragraph, 3-6 Sentences)
 
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact]
-* If you do not have a partner leave this section out
+This project investigates engagement dynamics within a federated social network (Mastodon) to evaluate whether interaction patterns differ structurally from centralized algorithmic platforms.
+
+The primary objective is to determine whether engagement is mainly exposure-driven (followers, amplification mechanisms) or content-driven (uniqueness vs duplication). Using API-based data collection and statistical modelling, the project evaluates amplification dynamics in a decentralized system.
+
 
 ### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
+
+* API-based Data Collection
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Inferential Statistics (Mann–Whitney U Test)
+* Linear Regression Modelling (OLS)
+* Log-transformation for heavy-tailed distributions
+
 
 ### Technologies
-* R
+
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc.
+* Pandas
+* NumPy
+* Statsmodels
+* Matplotlib / Plotly
+* Jupyter Notebook
+* Mastodon API
+
 
 ## Project Description
-(Provide more detailed overview of the project.
-Talk a bit about your data sources and what questions and hypothesis you are exploring.
-What specific data analysis/visualization and modelling work are you using to solve the
-problem? What blockers and challenges are you facing?
-Feel free to number or bullet point things here)
+
+This project analyzes hashtag-based activity on Mastodon to assess engagement behaviour in a federated environment.
+
+### Data Source
+
+Data was collected via the Mastodon public API using hashtag queries. The dataset includes:
+
+- Engagement metrics
+- Follower counts
+- Timestamp information
+- Duplication indicators
+- Hashtag categories
+
+### Research Questions
+
+1. Does duplicated content receive significantly different engagement than unique content?
+2. Is engagement strongly influenced by follower count?
+3. Are systemic amplification patterns observable in a federated network?
+
+### Analytical Workflow
+
+1. API extraction with pagination handling  
+2. Timestamp parsing  
+3. Duplicate detection and binary encoding  
+4. Log-transformation of engagement  
+5. Mann–Whitney U test  
+6. OLS regression modelling to estimate simultaneous effects of:
+   - Follower count
+   - Duplication status  
+
+### Key Findings
+
+- Engagement differs significantly between duplicated and unique content  
+- Duplicated posts receive ~24% less engagement (holding follower count constant)  
+- Follower count shows limited explanatory power  
+- Results suggest weak systemic amplification dynamics  
+
+### Challenges
+
+- API time-window limitations  
+- Sampling constraints  
+- Heavy-tailed engagement distributions  
+- Potential unobserved community-level effects  
+
+
+## Data Availability & Privacy
+
+Raw data is not included in this repository to respect user privacy and platform terms of service.
+
+The notebooks display aggregated results only.
+
+API extraction scripts were functional as of February 2026. Results may vary depending on API updates or data availability.
+
 
 ## Getting Started
 
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
+1. Clone the repository:
 
-    *If using offline data mention that and how they may obtain the data from the froup)*
+   git clone https://github.com/ivan-matfor/mastodon-challenge.git  
+   cd mastodon-challenge
 
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
+2. Create and activate the Conda environment:
 
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages)
-create another "setup.md" file and link to it here*
+   conda env create -f environment.yml  
+   conda activate mastodon_env
 
-5. Follow setup [instructions](Link to file)
+3. Launch Jupyter Notebook:
 
-## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
+   jupyter notebook
+
+4. Open the main analysis notebook:
+
+   notebooks/mastodon_analysis.ipynb
 
 
 ## Contributing Members
 
-**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])**
+- [Ivan Mateo Forcen](https://github.com/ivan-matfor)  
+  Data collection, Data Cleaning, EDA, statistical modelling
 
-#### Other Members:
-
- - [Full Name](https://github.com/[github handle])
- - [Full Name](https://github.com/[github handle])
+- [Hanna Sliashynskaya](https://github.com/hanna-sliash)  
+  Data collection, Data Cleaning, EDA, complementary analysis
