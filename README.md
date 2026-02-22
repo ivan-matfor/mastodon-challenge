@@ -35,6 +35,7 @@ The primary objective is to determine whether engagement is mainly exposure-driv
 
 This project analyzes hashtag-based activity on Mastodon to assess engagement behaviour in a federated environment.
 
+
 ### Data Source
 
 Data was collected via the Mastodon public API using hashtag queries. The dataset includes:
@@ -45,11 +46,13 @@ Data was collected via the Mastodon public API using hashtag queries. The datase
 - Duplication indicators
 - Hashtag categories
 
+
 ### Research Questions
 
 1. Does duplicated content receive significantly different engagement than unique content?
 2. Is engagement strongly influenced by follower count?
 3. Are systemic amplification patterns observable in a federated network?
+
 
 ### Analytical Workflow
 
@@ -62,6 +65,7 @@ Data was collected via the Mastodon public API using hashtag queries. The datase
    - Follower count
    - Duplication status  
 
+
 ### Key Findings
 
 - Engagement differs significantly between duplicated and unique content  
@@ -69,21 +73,13 @@ Data was collected via the Mastodon public API using hashtag queries. The datase
 - Follower count shows limited explanatory power  
 - Results suggest weak systemic amplification dynamics  
 
+
 ### Challenges
 
 - API time-window limitations  
 - Sampling constraints  
 - Heavy-tailed engagement distributions  
 - Potential unobserved community-level effects  
-
-
-## Data Availability & Privacy
-
-Raw data is not included in this repository to respect user privacy and platform terms of service.
-
-The notebooks display aggregated results only.
-
-API extraction scripts were functional as of February 2026. Results may vary depending on API updates or data availability.
 
 
 ## Getting Started
