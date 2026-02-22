@@ -88,6 +88,28 @@ API extraction scripts were functional as of February 2026. Results may vary dep
 
 ## Getting Started
 
+1. Clone the repository:
+
+   git clone https://github.com/ivan-matfor/mastodon-challenge.git  
+   cd mastodon-challenge
+
+2. Create and activate the Conda environment:
+
+   conda env create -f environment.yml  
+   conda activate mastodon_env
+
+3. Launch Jupyter Notebook:
+
+   jupyter notebook
+
+4. Follow the steps described in **Reproducing the Full Analytical Pipeline** to:
+   - Extract data
+   - Consolidate datasets
+   - Perform statistical analysis
+
+
+##  Reproducing the Full Analytical Pipeline
+
 To fully reproduce the analysis:
 
 1. **Data Extraction**  
