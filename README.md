@@ -88,23 +88,35 @@ API extraction scripts were functional as of February 2026. Results may vary dep
 
 ## Getting Started
 
-1. Clone the repository:
+To fully reproduce the analysis:
 
-   git clone https://github.com/ivan-matfor/mastodon-challenge.git  
-   cd mastodon-challenge
+1. **Data Extraction**  
+   Run `notebooks/pulling_data_API.ipynb` for each hashtag of interest.  
+   This notebook handles API pagination, timestamp parsing, and basic preprocessing.
 
-2. Create and activate the Conda environment:
+2. **Data Consolidation**  
+   Run `notebooks/dataframes_consolidation.ipynb` to:
+   - Merge datasets from different hashtags  
+   - Standardise columns  
+   - Add tag identifiers  
+   - Export a unified dataset  
 
-   conda env create -f environment.yml  
-   conda activate mastodon_env
+3. **Statistical Analysis**  
+   Run `notebooks/mastodon_analysis.ipynb` to perform:
+   - Duplicate detection (exact string matching)  
+   - Engagement construction  
+   - Non-parametric testing (Mann–Whitney U)  
+   - Log-transformation of engagement  
+   - OLS regression modelling  
 
-3. Launch Jupyter Notebook:
 
-   jupyter notebook
+## Data Availability & Privacy
 
-4. Open the main analysis notebook:
+Raw data is not included in this repository to respect user privacy and platform terms of service.
 
-   notebooks/mastodon_analysis.ipynb
+The notebooks display aggregated results only.
+
+API extraction scripts were functional as of February 2026. Results may vary depending on API updates or data availability.
 
 
 ## Contributing Members
