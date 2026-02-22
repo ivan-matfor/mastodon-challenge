@@ -13,3 +13,6 @@ dependencies:
   - seaborn
   - jupyter
   - ipykernel
+  - pip:
+      - requests
+      - beautifulsoup4

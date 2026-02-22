@@ -50,12 +50,16 @@ Data was collected via the Mastodon public API using hashtag-based queries. The 
 - Duplicate detection
 - Engagement metrics consolidation
 
-Key variables included:
+Key variables extracted from the API:
 
 - Engagement (combined interactions)
 - Follower count
-- Duplication status (binary)
-- Timestamp (weekday & hour extraction)
+- Timestamp
+
+Derived variables created during preprocessing:
+
+- Duplication status (binary indicator based on repeated content detection)
+- Weekday and hour (extracted from timestamp)
 
 Data cleaning steps:
 

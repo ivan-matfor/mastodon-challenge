@@ -1,7 +1,5 @@
 # Mastodon Engagement Analysis
 
-![Mastodon Logo](https://upload.wikimedia.org/wikipedia/commons/d/d5/Mastodon_logo.svg)
-
 #### -- Project Status: Completed
 
 
@@ -58,8 +56,8 @@ Data was collected via the Mastodon public API using hashtag queries. The datase
 1. API extraction with pagination handling  
 2. Timestamp parsing  
 3. Duplicate detection and binary encoding  
-4. Log-transformation of engagement  
-5. Mann–Whitney U test  
+4. Mann–Whitney U test
+5. Log-transformation of engagement  
 6. OLS regression modelling to estimate simultaneous effects of:
    - Follower count
    - Duplication status  
