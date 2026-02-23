@@ -140,7 +140,7 @@ API extraction scripts were functional as of February 2026. Results may vary dep
 ## Contributing Members
 
 - [Ivan Mateo Forcen](https://github.com/ivan-matfor)  
-  Data collection, Data Cleaning, EDA, statistical modelling
+  Data collection, Data Cleaning, EDA, statistical modelling & analysis
 
 - [Hanna Sliashynskaya](https://github.com/hanna-sliash)  
-  Data collection, Data Cleaning, EDA, complementary analysis
+  Data collection, Data Cleaning, EDA, complementary statistical modelling & analysis
